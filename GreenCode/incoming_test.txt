@@ -1,0 +1,7 @@
+package temporaryClassHolder;
+public class HulloWorldTestMethod {
+	
+	public HulloWorldTestMethod() {
+		System.out.println("Hello World, Printed from \'HulloWorldTestMethod\' ");
+	}
+}

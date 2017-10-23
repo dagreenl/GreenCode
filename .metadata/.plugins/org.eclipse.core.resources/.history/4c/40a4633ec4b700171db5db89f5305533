@@ -1,0 +1,69 @@
+package primary;
+
+import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.WatchService;
+import java.util.UUID;
+import static java.nio.file.StandardWatchEventKinds.ENTRY_CREATE;
+import static java.nio.file.StandardWatchEventKinds.ENTRY_DELETE;
+import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
+
+import temporaryClassHolder.TemporaryPackageHandler;
+
+public class Launch {
+	static ImportCode myImportCode = ImportCode.getInstance();
+	static TemporaryPackageHandler myTempPackHandler = TemporaryPackageHandler.getInstance();
+	Path watchedDirectory = Paths.get("/");
+	
+	
+	
+	
+    public static void main(String[] args) {
+    	
+    	Path dir = Paths.get("Path/To/Watched/Directory");
+    	dir.register(watcher, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
+    	
+    	
+    	try {
+			WatchService watcher = FileSystems.getDefault().newWatchService();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+    	
+    	UUID newlyGennedUUID = UUID.randomUUID();
+    	myImportCode.fileReadIn( "incoming_test.txt");
+    	String newFileName = newlyGennedUUID.toString() + ".java";
+    	myTempPackHandler.saveFile(newFileName, myImportCode.getReadInList());
+
+	    Class<?> dynamicClass = null;
+		try {
+			dynamicClass = Class.forName(newFileName);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
+	    Constructor tc = null;
+		try {
+			tc = dynamicClass.getConstructor();
+		} catch (NoSuchMethodException | SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    try {
+			Object t = tc.newInstance();
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
+				| InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
+    	
+    }
+    
+    
+}

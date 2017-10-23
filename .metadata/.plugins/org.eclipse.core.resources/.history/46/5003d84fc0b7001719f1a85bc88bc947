@@ -1,0 +1,20 @@
+package primary;
+
+import java.util.UUID;
+
+import temporaryClassHolder.TemporaryPackageHandler;
+
+public class Launch {
+	static ImportCode myImportCode = ImportCode.getInstance();
+	static TemporaryPackageHandler myTempPackHandler = TemporaryPackageHandler.getInstance();
+	
+    public static void main(String[] args) {
+    	
+    	UUID newlyGennedUUID = UUID.randomUUID();
+    	myImportCode.fileReadIn( "incoming_test.txt");
+    	myTempPackHandler.saveFile(newlyGennedUUID.toString(), myImportCode.getReadInList());
+    	
+    }
+    
+    
+}

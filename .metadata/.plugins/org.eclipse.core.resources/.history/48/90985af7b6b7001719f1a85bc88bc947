@@ -1,0 +1,53 @@
+package primary;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ImportCode {
+	ImportCode myImportCode;
+	private ArrayList<String> readInList;
+	public ImportCode ImportCode() {
+		if( myImportCode == null) {
+			myImportCode = new ImportCode();
+		}
+
+		return myImportCode;
+	}
+
+
+	public void fileReadIn(String fileLocation) {
+		Scanner scanner = new Scanner(fileLocation);
+		readInList = new ArrayList<String>();
+
+		while(scanner.hasNextLine()) {
+			readInList.add(scanner.nextLine());
+		}
+
+	}
+
+	public void saveFile(String desiredFileName) {
+		
+		PrintWriter writer = null;
+		try {
+			writer = new PrintWriter(desiredFileName);
+		} catch (FileNotFoundException e) {
+			System.err.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
+		for(String fileLine : readInList) {
+			
+		}
+		writer.close();
+		
+	}
+
+
+
+
+}

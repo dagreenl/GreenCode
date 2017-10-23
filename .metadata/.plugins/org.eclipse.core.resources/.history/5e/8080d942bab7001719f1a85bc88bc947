@@ -1,0 +1,18 @@
+package temporaryClassHolder;import java.util.ArrayList;
+
+public class TemporaryPackageHandler {
+	TemporaryPackageHandler myTemporaryPackageHandler;
+	
+	public TemporaryPackageHandler getInstance() {
+		myTemporaryPackageHandler = new TemporaryPackageHandler();
+	}
+	
+	private void TemporaryPackageHandler() {
+		
+	}
+	
+	public void saveFile(String desiredFileName, ArrayList<String> readInList) {
+		saveFile(String desiredFileName, ArrayList<String> readInList)
+	}
+	
+}

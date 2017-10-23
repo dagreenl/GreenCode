@@ -1,0 +1,6 @@
+ublic class HulloWorldTestMethod {
+	
+	public void HulloWorldTestMethod() {
+		System.out.println("Hello World, Printed from \'HulloWorldTestMethod\' ");
+	}
+}

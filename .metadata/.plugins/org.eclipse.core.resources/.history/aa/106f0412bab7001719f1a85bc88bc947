@@ -1,0 +1,30 @@
+package temporaryClassHolder;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+public class TempFileManager {
+
+	public void saveFile(String desiredFileName, ArrayList<String> readInList) {
+		
+		PrintWriter writer = null;
+		try {
+			writer = new PrintWriter(desiredFileName);
+		} catch (FileNotFoundException e) {
+			System.err.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
+		for(String fileLine : readInList) {
+			writer.println(fileLine);
+		}
+		
+		readInList = null;
+		writer.close();
+		
+	}
+	
+	
+}

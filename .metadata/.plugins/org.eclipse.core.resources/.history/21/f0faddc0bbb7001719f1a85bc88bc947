@@ -1,0 +1,15 @@
+package primary;
+
+import java.io.File;
+
+public class Launch {
+	
+    public static void main(String[] args) {
+    	String relPath = new File("").getPath();
+    	
+        System.out.println(relPath);
+        
+    }
+    
+    
+}

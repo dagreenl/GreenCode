@@ -1,0 +1,8 @@
+package primary;
+
+public class ImportCode {
+	ImportCode myImportCode;
+	public ImportCode ImportCode() {
+		
+	}
+}

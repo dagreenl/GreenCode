@@ -1,0 +1,16 @@
+package primary;
+
+import temporaryClassHolder.TemporaryPackageHandler;
+
+public class Launch {
+	static ImportCode myImportCode = ImportCode.getInstance();
+	static TemporaryPackageHandler myTempPackHandler = TemporaryPackageHandler.getInstance();
+	
+    public static void main(String[] args) {
+
+    	myImportCode.fileReadIn( "src/temporaryClassHolder/temp.txt");
+    	
+    }
+    
+    
+}

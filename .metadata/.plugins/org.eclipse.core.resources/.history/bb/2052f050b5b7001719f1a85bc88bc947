@@ -1,0 +1,21 @@
+package primary;
+
+import java.util.Scanner;
+
+public class ImportCode {
+	ImportCode myImportCode;
+	public ImportCode ImportCode() {
+		if( myImportCode == null) {
+			myImportCode = new ImportCode();
+		}
+		
+		return myImportCode;
+	}
+	
+	public void fileRead(String fileLocation) {
+		Scanner scanner = new Scanner(fileLocation);
+		
+	}
+	
+	
+}

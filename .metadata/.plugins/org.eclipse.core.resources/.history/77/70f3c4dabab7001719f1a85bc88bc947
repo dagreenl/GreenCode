@@ -1,0 +1,43 @@
+package primary;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ImportCode {
+	
+	
+	
+	static ImportCode myImportCode;
+	private ArrayList<String> readInList;
+	
+	public static ImportCode getInstance() {
+		if( myImportCode == null) {
+			myImportCode = new ImportCode();
+		}
+
+		return myImportCode;
+	}
+	
+	private void ImportCode() {
+
+	}
+
+
+	public void fileReadIn(String fileLocation) {
+		Scanner scanner = new Scanner(fileLocation);
+		readInList = new ArrayList<String>();
+
+		while(scanner.hasNextLine()) {
+			readInList.add(scanner.nextLine());
+		}
+
+	}
+
+
+
+
+
+}
