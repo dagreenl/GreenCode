@@ -56,9 +56,11 @@ public class DirectoryWatch {
 	                 
 	                if (kind == ENTRY_MODIFY) {
 	                    System.out.println(fileName + " has changed.");
+	                    
 	                }
 	                else if (kind == ENTRY_CREATE) {
 	                    System.out.println(fileName + " Has been created. "+ fileName.getFileName());
+	                    
 	                    
 	                }
 	                else if (kind == ENTRY_DELETE) {

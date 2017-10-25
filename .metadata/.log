@@ -880,3 +880,236 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
 	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
 	at java.base/java.lang.Thread.run(Unknown Source)
+!SESSION 2017-10-25 13:12:16.066 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-10-25 13:12:30.674
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:51.474
+!MESSAGE Removing part descriptor with the 'org.eclipse.datatools.connectivity.DataSourceExplorerNavigator' id and the 'Data Source Explorer' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-25 13:12:54.188
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'V:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:55.083
+!MESSAGE Removing part descriptor with the 'org.eclipse.datatools.sqltools.plan.planView' id and the 'Execution Plan' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:57.153
+!MESSAGE Removing part descriptor with the 'org.eclipse.datatools.sqltools.result.resultView' id and the 'SQL Results' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.103
+!MESSAGE Removing part descriptor with the 'org.eclipse.jpt.ui.jpaStructureView' id and the 'JPA Structure' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.107
+!MESSAGE Removing part descriptor with the 'org.eclipse.jpt.ui.jpaDetailsView' id and the 'JPA Details' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.108
+!MESSAGE Removing part descriptor with the 'org.eclipse.jst.jsf.ui.component.ComponentTreeView' id and the 'JSF Component Tree' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.109
+!MESSAGE Removing part descriptor with the 'org.eclipse.jst.jsf.ui.tagregistry.TagRegistryView' id and the 'Tag Registry' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.110
+!MESSAGE Removing part descriptor with the 'org.eclipse.jst.ws.jaxws.ui.views.AnnotationsView' id and the 'Annotation Properties' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.451
+!MESSAGE Removing part descriptor with the 'org.eclipse.rse.shells.ui.view.commandsView' id and the 'Remote Shell' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.453
+!MESSAGE Removing part descriptor with the 'org.eclipse.rse.ui.view.systemView' id and the 'Remote Systems' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.459
+!MESSAGE Removing part descriptor with the 'org.eclipse.rse.ui.view.teamView' id and the 'Team' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.460
+!MESSAGE Removing part descriptor with the 'org.eclipse.rse.ui.view.systemTableView' id and the 'Remote System Details' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.460
+!MESSAGE Removing part descriptor with the 'org.eclipse.rse.ui.view.SystemSearchView' id and the 'Remote Search' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.461
+!MESSAGE Removing part descriptor with the 'org.eclipse.rse.ui.view.scratchpad.SystemScratchpadViewPart' id and the 'Remote Scratchpad' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.461
+!MESSAGE Removing part descriptor with the 'org.eclipse.rse.ui.view.monitorView' id and the 'Remote Monitor' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.466
+!MESSAGE Removing part descriptor with the 'org.eclipse.tm.terminal.view.ui.TerminalsView' id and the 'Terminal' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.928
+!MESSAGE Removing part descriptor with the 'org.eclipse.tcf.te.ui.terminals.TerminalsView' id and the 'Terminals (Old)' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.935
+!MESSAGE Removing part descriptor with the 'org.eclipse.wst.internet.monitor.view' id and the 'TCP/IP Monitor' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.935
+!MESSAGE Removing part descriptor with the 'org.eclipse.wst.jsdt.ui.TypeHierarchy' id and the 'Hierarchy' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.936
+!MESSAGE Removing part descriptor with the 'org.eclipse.wst.jsdt.ui.PackageExplorer' id and the 'Script Explorer' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.937
+!MESSAGE Removing part descriptor with the 'org.eclipse.wst.jsdt.callhierarchy.view' id and the 'Call Hierarchy' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.938
+!MESSAGE Removing part descriptor with the 'org.eclipse.wst.jsdt.ui.SourceView' id and the 'Declaration' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.939
+!MESSAGE Removing part descriptor with the 'org.eclipse.wst.jsdt.ui.JavadocView' id and the 'Documentation' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.939
+!MESSAGE Removing part descriptor with the 'org.eclipse.wst.server.ui.ServersView' id and the 'Servers' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.940
+!MESSAGE Removing part descriptor with the 'org.eclipse.wst.xml.views.XPathView' id and the 'XPath' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.941
+!MESSAGE Removing part descriptor with the 'org.eclipse.wst.xsl.jaxp.debug.ui.resultview' id and the 'Result' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.941
+!MESSAGE Removing part descriptor with the 'org.eclipse.wst.xsl.ui.view.outline' id and the 'Stylesheet Model' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.942
+!MESSAGE Removing part descriptor with the 'de.loskutov.bco.views.BytecodeOutlineView' id and the 'Bytecode' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-10-25 13:12:58.942
+!MESSAGE Removing part descriptor with the 'de.loskutov.bco.views.BytecodeReferenceView' id and the 'Bytecode Reference' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2017-10-25 13:17:19.724
+!MESSAGE Full project indexing required:
+  [*] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\Java\jre-9.0.1\lib\jrt-fs.jar
+  [+] C:\Program Files\eclipse\plugins\org.apiguardian_1.0.0.v20170910-2246.jar
+  [+] C:\Program Files\eclipse\plugins\org.hamcrest.core_1.3.0.v201303031735.jar
+  [+] C:\Program Files\eclipse\plugins\org.junit.jupiter.api_5.0.0.v20170910-2246.jar
+  [+] C:\Program Files\eclipse\plugins\org.junit.jupiter.engine_5.0.0.v20170910-2246.jar
+  [+] C:\Program Files\eclipse\plugins\org.junit.jupiter.migrationsupport_5.0.0.v20170910-2246.jar
+  [+] C:\Program Files\eclipse\plugins\org.junit.jupiter.params_5.0.0.v20170910-2246.jar
+  [+] C:\Program Files\eclipse\plugins\org.junit.platform.commons_1.0.0.v20170910-2246.jar
+  [+] C:\Program Files\eclipse\plugins\org.junit.platform.engine_1.0.0.v20170910-2246.jar
+  [+] C:\Program Files\eclipse\plugins\org.junit.platform.launcher_1.0.0.v20170910-2246.jar
+  [+] C:\Program Files\eclipse\plugins\org.junit.platform.runner_1.0.0.v20170910-2246.jar
+  [+] C:\Program Files\eclipse\plugins\org.junit.platform.suite.api_1.0.0.v20170910-2246.jar
+  [+] C:\Program Files\eclipse\plugins\org.junit.vintage.engine_4.12.0.v20170910-2246.jar
+  [+] C:\Program Files\eclipse\plugins\org.junit_4.12.0.v201504281640\junit.jar
+  [+] C:\Program Files\eclipse\plugins\org.opentest4j_1.0.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.junit.jupiter.params_5.0.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.junit.platform.suite.api_1.0.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.junit.platform.launcher_1.0.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.junit.platform.runner_1.0.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.junit.jupiter.api_5.0.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.junit.platform.commons_1.0.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.hamcrest.core_1.3.0.v201303031735.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.junit.jupiter.engine_5.0.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.junit.vintage.engine_4.12.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.junit.jupiter.migrationsupport_5.0.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.junit_4.12.0.v201504281640\junit.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.apiguardian_1.0.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.junit.platform.engine_1.0.0.v20170910-2246.jar
+  [-] D:\Programming\Eclipse JEE Oxygen\eclipse\plugins\org.opentest4j_1.0.0.v20170910-2246.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.recommenders.utils 4 0 2017-10-25 13:18:14.791
+!MESSAGE Failed to format {0}: java.lang.Object cannot be cast to org.eclipse.jdt.internal.compiler.env.IBinaryType
+!STACK 0
+java.lang.ClassCastException: java.lang.Object cannot be cast to org.eclipse.jdt.internal.compiler.env.IBinaryType
+	at org.eclipse.jdt.internal.core.BinaryType.isAnnotation(BinaryType.java:738)
+	at org.eclipse.jdt.internal.core.BinaryType.toStringInfo(BinaryType.java:975)
+	at org.eclipse.jdt.internal.core.JavaElement.toStringInfo(JavaElement.java:692)
+	at org.eclipse.jdt.internal.core.JavaElement.toString(JavaElement.java:643)
+	at org.eclipse.jdt.internal.core.JavaElement.toString(JavaElement.java:636)
+	at java.text.MessageFormat.subformat(Unknown Source)
+	at java.text.MessageFormat.format(Unknown Source)
+	at java.text.Format.format(Unknown Source)
+	at java.text.MessageFormat.format(Unknown Source)
+	at org.eclipse.recommenders.utils.Logs.toStatus(Logs.java:108)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:139)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:418)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2017-10-25 13:18:14.841
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘{0}’.
+!STACK 0
+java.lang.ClassCastException: java.lang.Object cannot be cast to org.eclipse.jdt.internal.compiler.env.IGenericType
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyBuilder.buildSupertypes(HierarchyBuilder.java:117)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:164)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:319)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1291)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:724)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:790)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)

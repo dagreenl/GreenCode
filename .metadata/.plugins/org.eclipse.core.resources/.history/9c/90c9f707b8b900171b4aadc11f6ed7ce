@@ -1,0 +1,26 @@
+package primary;
+
+public class setupFiles {
+	static setupFiles mySetupFiles;
+	
+	
+	public static setupFiles getInstance() {
+		if( mySetupFiles == null) {
+			mySetupFiles = new setupFiles();
+		}
+
+		return mySetupFiles;
+	}
+	
+	private setupFiles() {
+
+	}
+	
+	public void readInFile(String filepath){
+		
+	}
+	
+	
+	
+
+}

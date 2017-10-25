@@ -1,0 +1,120 @@
+package primary;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.net.URL;
+import java.net.URLClassLoader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class setupFiles {
+	static setupFiles mySetupFiles;
+	final private static String  PACKAGE_NAME = "package temporaryClassHolder;";
+	final private static String  TEMPORARY_CLASS_PATH = "src/temporaryClassHolder/";
+	
+
+	public static setupFiles getInstance() {
+		if( mySetupFiles == null) {
+			mySetupFiles = new setupFiles();
+		}
+
+		return mySetupFiles;
+	}
+
+	private ArrayList<String> readInList;
+	private File myFile;
+
+	private setupFiles() {
+
+	}
+
+	public void fileReadIn(String fileLocation) {
+		readInList = new ArrayList<String>();
+		System.out.println(fileLocation);
+
+
+		myFile = new File(fileLocation);
+
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(myFile);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(myFile.getTotalSpace());
+		while(scanner.hasNextLine()) {
+			String incomingLine = scanner.nextLine();
+			readInList.add(incomingLine);
+		}
+
+		scanner.close();
+	}
+
+	public void saveFile(String desiredFileName) {
+		System.out.println("saveFile: "+desiredFileName);
+		File desiredFile = new File(TEMPORARY_CLASS_PATH+desiredFileName);
+		PrintWriter writer = null;
+		try {
+
+			writer = new PrintWriter(desiredFile);
+
+		} catch (FileNotFoundException e) {
+			System.err.println(e.getMessage());
+			e.printStackTrace();
+		}
+
+		writer.println(PACKAGE_NAME+"\n");
+
+		for(String fileLine : readInList) {
+			writer.println(fileLine);
+		}
+
+		readInList = new ArrayList<String>();
+
+		writer.close();
+		
+		try {
+			addSoftwareLibrary(desiredFile);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+	public static void addURL(File file) throws IOException {
+
+		URL url = file.toURI().toURL();
+
+		URLClassLoader classLoader = (URLClassLoader)ClassLoader.getSystemClassLoader();
+		Method method = null;
+		try {
+			method = URLClassLoader.class.getDeclaredMethod("addURL", URL.class);
+		} catch (NoSuchMethodException | SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		method.setAccessible(true);
+		try {
+			method.invoke(classLoader, url);
+		} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		}//end class
+	
+	
+	
+	
+	
+
+
+
+
+}

@@ -1,0 +1,116 @@
+package primary;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.net.URL;
+import java.net.URLClassLoader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class setupFiles {
+	static setupFiles mySetupFiles;
+	final private static String  PACKAGE_NAME = "package temporaryClassHolder;";
+	final private static String  TEMPORARY_CLASS_PATH = "src/temporaryClassHolder/";
+	final private static Class<?>[] parameters = new Class[]{URL.class};
+
+	public static setupFiles getInstance() {
+		if( mySetupFiles == null) {
+			mySetupFiles = new setupFiles();
+		}
+
+		return mySetupFiles;
+	}
+
+	private ArrayList<String> readInList;
+	private File myFile;
+
+	private setupFiles() {
+
+	}
+
+	public void fileReadIn(String fileLocation) {
+		readInList = new ArrayList<String>();
+		System.out.println(fileLocation);
+
+
+		myFile = new File(fileLocation);
+
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(myFile);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(myFile.getTotalSpace());
+		while(scanner.hasNextLine()) {
+			String incomingLine = scanner.nextLine();
+			readInList.add(incomingLine);
+		}
+
+		scanner.close();
+	}
+
+	public void saveFile(String desiredFileName) {
+		System.out.println("saveFile: "+desiredFileName);
+		File desiredFile = new File(TEMPORARY_CLASS_PATH+desiredFileName);
+		PrintWriter writer = null;
+		try {
+
+			writer = new PrintWriter(desiredFile);
+
+		} catch (FileNotFoundException e) {
+			System.err.println(e.getMessage());
+			e.printStackTrace();
+		}
+
+		writer.println(PACKAGE_NAME+"\n");
+
+		for(String fileLine : readInList) {
+			writer.println(fileLine);
+		}
+
+		readInList = new ArrayList<String>();
+
+		writer.close();
+
+		try {
+			addURL(desiredFile.toURI().toURL());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void addURL(URL u) throws IOException {
+		
+		//URLClassLoader sysloader = (URLClassLoader) ClassLoader.getSystemClassLoader();
+		URLClassLoader sysloader = (URLClassLoader) URLClassLoader.getSystemClassLoader();
+		
+		
+		Class<?> sysclass = URLClassLoader.class;
+		try {
+			Method method = sysclass.getDeclaredMethod("addURL",parameters);
+			method.setAccessible(true);
+			method.invoke(sysloader,new Object[]{ u }); 
+		} catch (Throwable t) {
+			t.printStackTrace();
+			throw new IOException("Error, could not add URL to system classloader");
+		}        
+	}
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,51 @@
+package primary;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class setupFiles {
+	static setupFiles mySetupFiles;
+	
+	
+	public static setupFiles getInstance() {
+		if( mySetupFiles == null) {
+			mySetupFiles = new setupFiles();
+		}
+
+		return mySetupFiles;
+	}
+	
+	private setupFiles() {
+
+	}
+	
+public void fileReadIn(String fileLocation) {
+		
+		System.out.println(fileLocation);
+		
+		
+		File myFile = new File(fileLocation);
+		
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(myFile);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		readInList = new ArrayList<String>();
+
+		while(scanner.hasNextLine()) {
+			String incomingLine = scanner.nextLine();
+			readInList.add(incomingLine);
+		}
+		
+
+	}
+	
+	
+	
+
+}

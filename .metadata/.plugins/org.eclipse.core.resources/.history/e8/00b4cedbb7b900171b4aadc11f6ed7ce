@@ -1,0 +1,20 @@
+package primary;
+
+public class setupFiles {
+	setupFiles mySetupFiles;
+	
+	
+	public static ImportCode getInstance() {
+		if( myImportCode == null) {
+			myImportCode = new ImportCode();
+		}
+
+		return myImportCode;
+	}
+	
+	private ImportCode() {
+
+	}
+	
+
+}

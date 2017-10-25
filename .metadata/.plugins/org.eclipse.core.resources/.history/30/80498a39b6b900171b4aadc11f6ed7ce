@@ -1,0 +1,84 @@
+package primary;
+
+import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.WatchEvent;
+import java.nio.file.WatchKey;
+import java.nio.file.WatchService;
+import java.util.UUID;
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
+
+
+import static java.nio.file.StandardWatchEventKinds.ENTRY_CREATE;
+import static java.nio.file.StandardWatchEventKinds.ENTRY_DELETE;
+import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
+
+import temporaryClassHolder.TemporaryPackageHandler;
+
+
+public class Launch {
+	static ImportCode myImportCode = ImportCode.getInstance();
+	static TemporaryPackageHandler myTempPackHandler = TemporaryPackageHandler.getInstance();
+	static DynamicClassCreation myClassCreator = DynamicClassCreation.getInstance();
+	static DirectoryWatch myDirWatch = DirectoryWatch.getInstance();
+	private static Thread watcherThread;
+	
+
+
+	public static void main(String[] args) {
+		
+		watcherThread = new Thread() {
+		    public void run() {
+		        myDirWatch.startDirWatch("src/temporaryClassHolder");
+		    }  
+		};
+		//watcherThread.start();
+	
+		
+		
+		
+		myImportCode.fileReadIn( "TestThisClass.java" );
+		
+		String newClassName = "TestThisClass.java";
+		
+		myTempPackHandler.saveFile(newClassName, myImportCode.getReadInList());
+		
+		
+		String newTestClassName = "TestThisClassTest.java";
+		myImportCode.fileReadIn( "TestThisClassTest.java" );
+		myTempPackHandler.saveFile(newTestClassName, myImportCode.getReadInList());
+		
+		try {
+			myClassCreator.createClass(newClassName);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.err.println(e.getMessage());
+			System.err.println(e.getClass().getName());
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+	//	Result result = JUnitCore.runClasses(TestThisClassTest.class);
+		
+	//	for (Failure failure : result.getFailures()) {
+	//         System.out.println(failure.toString());
+	//      }
+
+
+
+
+	}
+
+
+}

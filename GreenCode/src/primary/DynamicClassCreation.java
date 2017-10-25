@@ -8,6 +8,8 @@ import java.net.URLClassLoader;
 
 
 
+
+
 public class DynamicClassCreation {
 	//	final private static String  ESTABLISHED_CLASS_PATH = "package temporaryClassHolder;";
 	//final private static String  TEMPORARY_CLASS_PATH = "package temporaryClassHolder;";
@@ -38,15 +40,60 @@ public class DynamicClassCreation {
 		//System.out.println(classesDir.getCanonicalPath());
 		
 	//	ClassLoader systemClassLoader = ClassLoader.getSystemResource(brotaco.getCanonicalPath());
+		URL URLttc =  new File(System.getProperty("user.dir")
+				+ "/src/temporaryClassHolder.TestThisClass").toURI().toURL() ;
+		
 		URLClassLoader urlcl = new URLClassLoader(
 				new URL[] {
-						new File(System.getProperty("user.dir")
-								+ "/src/temporaryClassHolder/").toURI().toURL()
+						URLttc
 						});
 		
+		/*
+        ClassLoader loader = TestThisClass.class.getClassLoader();
+        TestThisClass classy = new TestThisClass();
+        ClassLoader third = urlcl.getSystemClassLoader();
+       
+        System.out.println(TestThisClass.class.getCanonicalName());
+        System.out.println(classy.getClass().getProtectionDomain().getCodeSource().getLocation() );
+        System.out.println(urlcl.getSystemResource(".").getPath());
+        System.out.println(urlcl.getSystemResource(".").getPath());
+        */
+        
+        
+        
+        /*
+         *     URL url = file.toURL();          // file:/c:/myclasses/
+    URL[] urls = new URL[]{url};
+
+    // Create a new class loader with the directory
+    ClassLoader cl = new URLClassLoader(urls);
+
+    // Load in the class; MyClass.class should be located in
+    // the directory file:/c:/myclasses/com/mycompany
+    Class cls = cl.loadClass("com.mycompany.MyClass");
+         */
+        
+        URL url2 =  new File(System.getProperty("user.dir")
+				+ "/src/").toURI().toURL() ;
+        URL[] urls = new URL[]{url2};
+        ClassLoader cl = new URLClassLoader(urls);
+        Class cls = cl.loadClass("temporaryClassHolder.TestThisClass");
+        System.out.println(cls.getName());
+        
+        
+        
+        
+	//	@SuppressWarnings("unused")
+	//	Class<?> dynamicClass = Class.forName("src.temporaryClassHolder.TestThisClass");
 		
-		//@SuppressWarnings("unused")
-		//Class<?> dynamicClass = Class.forName("src.temporaryClassHolder.TestThisClass");
+
+	//	Class<?> dynamicClass =urlcl.loadClass("TestThisClass");
+	//	Class<?> dynamicClass =urlcl.getClass().forName("TestThisClass");
+		for(Class name : (urlcl.getClass().getClasses() ) ){
+			System.out.println(name.getName());
+		}
+		
+	//	System.out.println(urlcl.getClass().getClasses().toString());
 		
 	//	System.out.println("***CREATED DYNAMIC CLASS***");
 		//	Class.forName(fileName);

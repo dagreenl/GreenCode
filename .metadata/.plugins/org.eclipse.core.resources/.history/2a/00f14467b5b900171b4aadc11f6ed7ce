@@ -1,0 +1,112 @@
+package primary;
+
+import java.io.File;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
+import java.net.URLClassLoader;
+
+import temporaryClassHolder.TestThisClass;
+
+
+
+public class DynamicClassCreation {
+	//	final private static String  ESTABLISHED_CLASS_PATH = "package temporaryClassHolder;";
+	//final private static String  TEMPORARY_CLASS_PATH = "package temporaryClassHolder;";
+
+	static DynamicClassCreation myDynamicClassCreation;
+
+
+
+	public static DynamicClassCreation getInstance() {
+		if(myDynamicClassCreation == null) {
+			myDynamicClassCreation = new DynamicClassCreation();
+		}
+		return myDynamicClassCreation;
+	}
+
+	public void createClass(String fileName) throws Exception{
+		//file is is another package.
+
+	//	System.out.println("Working Directory = " + System.getProperty("user.dir"));
+	//	String totalPathToCLass = System.getProperty("user.dir");
+		//System.out.println(totalPathToCLass);
+		
+		//File classesDir = new File(System.getProperty("user.dir")+"/src/temporaryClassHolder/");
+		
+		File brotaco = new File("");
+	//	String path = brotaco.getCanonicalPath()+"\\src\\temporaryClassHolder\\";
+	//	System.out.println("Brotaco: "+path);
+		//System.out.println(classesDir.getCanonicalPath());
+		
+	//	ClassLoader systemClassLoader = ClassLoader.getSystemResource(brotaco.getCanonicalPath());
+		URL URLttc =  new File(System.getProperty("user.dir")
+				+ "/src/temporaryClassHolder.TestThisClass").toURI().toURL() ;
+		
+		URLClassLoader urlcl = new URLClassLoader(
+				new URL[] {
+						URLttc
+						});
+		
+		
+        ClassLoader loader = TestThisClass.class.getClassLoader();
+        TestThisClass classy = new TestThisClass();
+        ClassLoader third = urlcl.getSystemClassLoader();
+       
+        System.out.println(TestThisClass.class.getCanonicalName());
+        System.out.println(classy.getClass().getProtectionDomain().getCodeSource().getLocation() );
+        System.out.println(urlcl.getSystemResource(".").getPath());
+        System.out.println(urlcl.getSystemResource(".").getPath());
+        
+        
+        
+        /*
+         *     URL url = file.toURL();          // file:/c:/myclasses/
+    URL[] urls = new URL[]{url};
+
+    // Create a new class loader with the directory
+    ClassLoader cl = new URLClassLoader(urls);
+
+    // Load in the class; MyClass.class should be located in
+    // the directory file:/c:/myclasses/com/mycompany
+    Class cls = cl.loadClass("com.mycompany.MyClass");
+         */
+        
+        URL url2 =  new File(System.getProperty("user.dir")
+				+ "/src/temporaryClassHolder/").toURI().toURL() ;
+        URL[] urls = new URL[]{url2};
+        ClassLoader cl = new URLClassLoader(urls);
+        
+        
+        
+        
+        
+	//	@SuppressWarnings("unused")
+	//	Class<?> dynamicClass = Class.forName("src.temporaryClassHolder.TestThisClass");
+		
+
+	//	Class<?> dynamicClass =urlcl.loadClass("TestThisClass");
+	//	Class<?> dynamicClass =urlcl.getClass().forName("TestThisClass");
+		for(Class name : (urlcl.getClass().getClasses() ) ){
+			System.out.println(name.getName());
+		}
+		
+	//	System.out.println(urlcl.getClass().getClasses().toString());
+		
+	//	System.out.println("***CREATED DYNAMIC CLASS***");
+		//	Class.forName(fileName);
+/*
+		Constructor<?> tc = dynamicClass.getConstructor();
+		System.out.println("Constructor Created");
+
+		Object t = tc.newInstance();
+		System.out.println("Object Instatiated");
+
+*/
+
+
+	}
+
+
+
+}

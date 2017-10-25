@@ -1,0 +1,80 @@
+package primary;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class setupFiles {
+	static setupFiles mySetupFiles;
+	
+	
+	public static setupFiles getInstance() {
+		if( mySetupFiles == null) {
+			mySetupFiles = new setupFiles();
+		}
+
+		return mySetupFiles;
+	}
+
+	private ArrayList<String> readInList;
+	
+	private setupFiles() {
+
+	}
+	
+public void fileReadIn(String fileLocation) {
+		
+		System.out.println(fileLocation);
+		
+		
+		File myFile = new File(fileLocation);
+		
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(myFile);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		readInList = new ArrayList<String>();
+
+		while(scanner.hasNextLine()) {
+			String incomingLine = scanner.nextLine();
+			readInList.add(incomingLine);
+		}
+		
+
+	}
+
+public void saveFile(String desiredFileName, ArrayList<String> readInList) {
+	System.out.println("saveFile: "+desiredFileName);
+	
+	PrintWriter writer = null;
+	try {
+		
+		writer = new PrintWriter(TEMPORARY_CLASS_PATH+desiredFileName);
+		
+	} catch (FileNotFoundException e) {
+		System.err.println(e.getMessage());
+		e.printStackTrace();
+	}
+	
+	writer.println(PACKAGE_NAME+"\n");
+	
+	for(String fileLine : readInList) {
+		writer.println(fileLine);
+	}
+	
+	readInList = null;
+	
+	writer.close();
+	
+
+}
+	
+	
+	
+
+}
