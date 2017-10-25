@@ -52,11 +52,21 @@ public class DirectoryWatch {
 	                WatchEvent<Path> ev = (WatchEvent<Path>) event;
 	                Path fileName = ev.context();
 	                 
-	                System.out.println(kind.name() + ": " + fileName);
+	              //  System.out.println(kind.name() + ": " + fileName);
 	                 
 	                if (kind == ENTRY_MODIFY) {
-	                    System.out.println("My source file has changed!!!");
+	                    System.out.println(fileName + " has changed.");
 	                }
+	                else if (kind == ENTRY_CREATE) {
+	                    System.out.println(fileName + " Has been created. "+ fileName.getFileName());
+	                    
+	                }
+	                else if (kind == ENTRY_DELETE) {
+	                	System.out.println(fileName + " Has been deleted..");
+	                }
+	                
+	                
+	              
 	            }
 	             
 	            boolean valid = key.reset();

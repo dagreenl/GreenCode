@@ -4,6 +4,7 @@ public class TemporaryPackageHandler {
 	
 	static TemporaryPackageHandler myTemporaryPackageHandler;
 	TempFileManager myTempFileManager = TempFileManager.getInstance();
+	
 
 	public static TemporaryPackageHandler getInstance() {
 		

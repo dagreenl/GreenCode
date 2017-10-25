@@ -44,6 +44,7 @@ public class ImportCode {
 			String incomingLine = scanner.nextLine();
 			readInList.add(incomingLine);
 		}
+		
 
 	}
 	

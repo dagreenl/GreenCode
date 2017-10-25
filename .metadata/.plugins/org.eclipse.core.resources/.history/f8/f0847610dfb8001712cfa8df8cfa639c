@@ -1,0 +1,12 @@
+
+public class TestThisClass {
+	
+	public TestThisClass() {
+		System.out.println("HI! THIS IS THE TEST CLASS! ");
+	}
+	
+	public String output() {
+		return "THIS IS FROM THE CLASS BEING TESTING";
+	}
+
+}

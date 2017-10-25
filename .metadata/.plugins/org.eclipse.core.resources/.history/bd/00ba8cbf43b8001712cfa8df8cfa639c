@@ -1,0 +1,9 @@
+package establishedClassHolder;
+
+public class TestThisClass {
+	
+	public HulloWorldTestMethod() {
+		System.out.println("Hello World, Printed from \'HulloWorldTestMethod\' ");
+	}
+
+}

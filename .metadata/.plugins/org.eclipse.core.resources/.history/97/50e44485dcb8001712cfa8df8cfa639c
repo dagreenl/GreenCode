@@ -1,0 +1,14 @@
+package temporaryClassHolder;
+
+
+public class TestThisClass {
+	
+	public TestThisClass() {
+		System.out.println("HI! THIS IS THE TEST CLASS! ");
+	}
+	
+	public String output() {
+		System.out.println("THIS IS FROM THE CLASS BEING TESTING")
+	}
+
+}

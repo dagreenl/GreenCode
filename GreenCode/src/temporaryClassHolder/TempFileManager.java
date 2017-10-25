@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 public class TempFileManager {
 	static TempFileManager myTempFileManager;
+	final private static String  PACKAGE_NAME = "package temporaryClassHolder;";
+	final private static String  TEMPORARY_CLASS_PATH = "src/temporaryClassHolder/";
 	
 	public static TempFileManager getInstance() {
 		
@@ -27,19 +29,21 @@ public class TempFileManager {
 		PrintWriter writer = null;
 		try {
 			
-			writer = new PrintWriter(desiredFileName);
+			writer = new PrintWriter(TEMPORARY_CLASS_PATH+desiredFileName);
 			
 		} catch (FileNotFoundException e) {
 			System.err.println(e.getMessage());
 			e.printStackTrace();
 		}
 		
+		writer.println(PACKAGE_NAME+"\n");
 		
 		for(String fileLine : readInList) {
 			writer.println(fileLine);
 		}
 		
 		readInList = null;
+		
 		writer.close();
 		
 	}

@@ -1,0 +1,7 @@
+package establishedClassHolder;
+
+import junit.framework.TestCase;
+
+public class TestThisClassTest extends TestCase {
+
+}
